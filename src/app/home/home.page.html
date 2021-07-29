@@ -1,20 +1,38 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="header">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="titulo">
+      Cine
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ionic">
+  <br> <br>
+<ion-img src="http://img.lum.dolimg.com/v1/images/banner_cabecera_1024x200_1d0ac256.jpeg?region=0,0,1024,200"> </ion-img> <br>
+  <ion-title class="titulop"> BUSCADOR DE PELICULAS </ion-title>
+  <br><br>
+  <ion-label for="nombre" class="label"> Título:
+    <ion-input type="text" name="nombre" [(ngModel)]="datob.nombre" class="texto"> </ion-input>
+  </ion-label>
+  <br><br> <br>
+  <ion-input type="button" value="Buscar" (click)="buscar()" (click)="mostrar=true" class="boton"> </ion-input>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+  <br><br><br>
+  <br> <br>
+  <div *ngIf="mostrar" class="info">
+    <div class="ingformacion">
+      <br> <br>
+      <ion-img class="card-img-top" src="{{Peliculas.Poster}}" alt="Card image cap"> </ion-img>
+      <ion-text id="texto" class="informacion"> <b>Título de la pelicula: </b> {{Peliculas.Title}} <br>
+        <b>Fecha de lanzamiento: </b> {{Peliculas.Year}} <br>
+        <b> Idiomas: </b> {{Peliculas.Language}} <br>
+        <b> Genero: </b> {{Peliculas.Genre}} <br>
+        <b> Calificación: </b> {{Peliculas.Type}} <br>
+        <b> Duración: </b> {{Peliculas.Runtime}} <br>
+        <b> Clasificación: </b> {{Peliculas.Rated}}
+      </ion-text>
+    </div>
   </div>
+
 </ion-content>

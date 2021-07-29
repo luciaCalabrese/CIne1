@@ -1,27 +1,48 @@
-#container {
+
+.text{
+  display: inline-block;
+  vertical-align: top;
+    font-size: 20px;
+    padding: 30px;
+}
+.titulop, .label{
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
+.titulop{
+  font-size: 30px;
+}
+.boton{
+  border: solid 5px blue;
+  --background: Blue;
+  color: aliceblue;
+  text-align: center;
+  width: 30%;
+  float: right;
+  margin-right: 36.5%;
+}
+.label{
+    text-align: center;
+    width: 30%;
+    padding-left: 30%;
+    padding-right: 30px;
+}
+.texto{
+  border: solid 3px black;
+  padding-left: 30%;
+    padding-right: 30px;
+    width: 30%;
+    display: inline-block;
+    color: black;
+    
 
-#container strong {
+}
+.card-img-top{
+  width: 20%;
+  display: inline-block;
+}
+.informacion{
+  display: inline-block;
+  vertical-align: top;
   font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  padding: 30px;
 }
